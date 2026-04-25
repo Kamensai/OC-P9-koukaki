@@ -1,0 +1,26 @@
+{
+  "name": "foce-child",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass assets/scss/theme.scss assets/css/theme.css",
+    "sass:watch": "sass --watch assets/sass/theme.scss:assets/css/theme.css",
+    "sass:dev": "sass --watch assets/sass/theme.scss:assets/css/theme.css --style=expanded --source-map",
+    "sass:prod": "sass assets/sass/theme.scss assets/css/theme.css --style=compressed --no-source-map"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kamensai/OC-P9-koukaki.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kamensai/OC-P9-koukaki/issues"
+  },
+  "homepage": "https://github.com/Kamensai/OC-P9-koukaki#readme",
+  "devDependencies": {
+    "sass": "^1.99.0"
+  }
+}
