@@ -1,0 +1,61 @@
+.oscar {
+  position: relative;
+  margin: auto;
+  padding: 120px 20px;
+
+  &__wrapper {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  &__title {
+    width: 70%;
+    height: 196px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url("../images/oscar_orange_bg.png");
+    background-size: 103% 103%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  h3 {
+    width: 100%;
+    margin: 0;
+    padding: 0 30px 0 45px;
+
+    font-family: "Quicksand", sans-serif;
+    color: #fff;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 42px;
+    line-height: 1.1;
+    text-align: left;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    letter-spacing: -2px;
+  }
+
+  &__logo {
+    max-width: 30%;
+    height: auto;
+  }
+
+  &::before {
+    content: url("../images/Sunflower.png");
+    position: absolute;
+    left: 10em;
+    top: 2em;
+  }
+  &::after {
+    content: url("../images/orchid.png");
+    position: absolute;
+    right: -4em;
+    bottom: 21em;
+  }
+}

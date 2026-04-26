@@ -21,3 +21,14 @@ if ( get_stylesheet() !== get_template() ) {
         return get_option( 'theme_mods_' . get_template(), $default );
     } );
 }
+
+function foce_child_enqueue_scripts() {
+    wp_enqueue_script(
+        'foce-child-scroll-animations',
+        get_stylesheet_directory_uri() . '/assets/js/scroll-animations.js',
+        array(),
+        filemtime(get_stylesheet_directory() . '/assets/js/scroll-animations.js'),
+        true
+    );
+}
+add_action('wp_enqueue_scripts', 'foce_child_enqueue_scripts');
