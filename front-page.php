@@ -4,9 +4,9 @@ get_header();
 ?>
 
     <main id="primary" class="site-main">
-        <section class="banner">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
-        </section>
+
+        <?php get_template_part('template-parts/banner'); ?>
+        
         <section id="story" class="story">
             <h2 class="reveal-title">L'histoire</h2>
             <article id="" class="story__article">
