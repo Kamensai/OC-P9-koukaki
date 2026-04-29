@@ -25,9 +25,17 @@ if ( get_stylesheet() !== get_template() ) {
 function foce_child_enqueue_scripts() {
     wp_enqueue_script(
         'foce-child-scroll-animations',
-        get_stylesheet_directory_uri() . '/assets/js/scroll-animations.js',
+        get_stylesheet_directory_uri() . '/assets/js/title-scroll-animations.js',
         array(),
-        filemtime(get_stylesheet_directory() . '/assets/js/scroll-animations.js'),
+        filemtime(get_stylesheet_directory() . '/assets/js/title-scroll-animations.js'),
+        true
+    );
+
+    wp_enqueue_script(
+        'foce-child-banner-parallax',
+        get_stylesheet_directory_uri() . '/assets/js/banner-parallax.js',
+        array(),
+        filemtime(get_stylesheet_directory() . '/assets/js/banner-parallax.js'),
         true
     );
 }
