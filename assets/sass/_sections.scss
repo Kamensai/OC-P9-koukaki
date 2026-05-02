@@ -84,13 +84,64 @@
   }
 }
 
-/* Sections */
+/* Story */
 
 #story {
   opacity: 0;
   transform: translateY(200px);
   animation: fadeInFromBottom 0.8s ease-out forwards;
 }
+
+/* Characters */
+
+.story #characters {
+  overflow: visible;
+  margin: 6em 0;
+}
+
+.story #characters .characters {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.story #characters .characters-title {
+  position: relative;
+  width: 50%;
+  padding: 42px 0;
+}
+
+.story #characters .characters-swiper {
+  width: 100%;
+  max-width: 100%;
+  height: 440px;
+  overflow: hidden;
+  margin-left: 0;
+}
+
+.story #characters .characters-swiper,
+.story #characters .swiper-wrapper,
+.story #characters .swiper-slide {
+  flex: none !important;
+}
+
+.story #characters .swiper-slide {
+  width: auto;
+  text-align: center;
+  margin: 0 15px;
+}
+
+.story #characters .swiper-slide img {
+  height: 400px;
+  display: block;
+  padding: 0 15px;
+}
+
+.story #characters .swiper-slide figcaption {
+  font-size: 20px;
+}
+
+/* Studio */
 
 #studio {
   opacity: 0;

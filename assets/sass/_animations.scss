@@ -41,6 +41,10 @@
 
 /* title reveal */
 
+.story .reveal-title {
+  z-index: 5;
+}
+
 .reveal-title {
   gap: 0.25em;
   overflow: hidden;

@@ -38,5 +38,29 @@ function foce_child_enqueue_scripts() {
         filemtime(get_stylesheet_directory() . '/assets/js/banner-parallax.js'),
         true
     );
+
+    /** Enqueue Swiper JS and CSS for the characters slider */
+    wp_enqueue_style(
+    'swiper-css',
+    'https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css',
+    array(),
+    '12'
+    );
+
+    wp_enqueue_script(
+        'swiper-js',
+        'https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js',
+        array(),
+        '12',
+        true
+    );
+
+    wp_enqueue_script(
+        'foce-child-characters-swiper',
+        get_stylesheet_directory_uri() . '/assets/js/characters-swiper.js',
+        array('swiper-js'),
+        filemtime(get_stylesheet_directory() . '/assets/js/characters-swiper.js'),
+        true
+    );
 }
 add_action('wp_enqueue_scripts', 'foce_child_enqueue_scripts');
