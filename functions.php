@@ -62,5 +62,13 @@ function foce_child_enqueue_scripts() {
         filemtime(get_stylesheet_directory() . '/assets/js/characters-swiper.js'),
         true
     );
+
+    wp_enqueue_script(
+        'foce-child-place-parallax',
+        get_stylesheet_directory_uri() . '/assets/js/place-parallax.js',
+        array(),
+        filemtime(get_stylesheet_directory() . '/assets/js/place-parallax.js'),
+        true
+    );
 }
 add_action('wp_enqueue_scripts', 'foce_child_enqueue_scripts');

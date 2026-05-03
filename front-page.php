@@ -13,13 +13,9 @@ get_header();
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
             <?php get_template_part('template-parts/characters'); ?>
-            <article id="place">
-                <div>
-                    <h3 class="reveal-title">Le Lieu</h3>
-                    <p><?php echo get_theme_mod('place'); ?></p>
-                </div>
 
-            </article>
+            <?php get_template_part('template-parts/place'); ?>
+            
         </section>
 
 
