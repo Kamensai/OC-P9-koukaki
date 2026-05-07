@@ -24,9 +24,3 @@ jQuery(document).ready(function ($) {
     $menu.attr("aria-hidden", "true");
   });
 });
-
-document.querySelectorAll("*").forEach((element) => {
-  if (element.scrollWidth > document.documentElement.clientWidth) {
-    console.log(element, element.scrollWidth);
-  }
-});
