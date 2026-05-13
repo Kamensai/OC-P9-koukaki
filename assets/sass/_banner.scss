@@ -1,0 +1,96 @@
+/* Variables */
+
+$banner-height-desktop: 806px;
+$banner-height-mobile: 500px;
+
+$banner-logo-width-desktop: 50%;
+$banner-logo-width-mobile: 70%;
+
+$banner-video-z-index: 1;
+$banner-content-z-index: 2;
+
+$floating-logo-duration: 3s;
+$floating-logo-distance: -18px;
+
+$breakpoint-mobile: 768px;
+
+/* Mixins */
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin full-cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Animations */
+
+@keyframes floating-logo {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY($floating-logo-distance);
+  }
+}
+
+/* Banner */
+
+.banner {
+  position: relative;
+  min-height: $banner-height-desktop;
+  overflow: hidden;
+  background-image: none;
+  background-size: cover;
+  background-position: center;
+
+  @include flex-center;
+
+  &__video {
+    @include full-cover;
+    object-fit: cover;
+    z-index: $banner-video-z-index;
+  }
+
+  &__logo-wrapper {
+    position: relative;
+    z-index: $banner-content-z-index;
+    width: 100%;
+
+    @include flex-center;
+  }
+
+  &__logo {
+    width: $banner-logo-width-desktop;
+    margin-top: 0;
+    animation: floating-logo $floating-logo-duration ease-in-out infinite;
+    will-change: transform;
+  }
+}
+
+/* Responsive */
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .banner {
+    min-height: $banner-height-mobile;
+    background-image: url("../images/banner.png");
+
+    &__video {
+      display: none;
+    }
+
+    &__logo {
+      width: $banner-logo-width-mobile;
+      margin-top: 0;
+      animation: none;
+    }
+  }
+}
